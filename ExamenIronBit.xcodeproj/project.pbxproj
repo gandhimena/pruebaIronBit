@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D95839FAD5516421E083DE3E /* Pods_ExamenIronBit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A6958AD86190EBD0AA8270 /* Pods_ExamenIronBit.framework */; };
 		FD6C83751E68AF1F0021D61B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6C83741E68AF1F0021D61B /* AppDelegate.swift */; };
 		FD6C83771E68AF1F0021D61B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6C83761E68AF1F0021D61B /* ViewController.swift */; };
 		FD6C837A1E68AF1F0021D61B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD6C83781E68AF1F0021D61B /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21169CDE4CA582BB05E93C26 /* Pods-ExamenIronBit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamenIronBit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExamenIronBit/Pods-ExamenIronBit.debug.xcconfig"; sourceTree = "<group>"; };
+		2B46F6CC35187EB5AD08FF54 /* Pods-ExamenIronBit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamenIronBit.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExamenIronBit/Pods-ExamenIronBit.release.xcconfig"; sourceTree = "<group>"; };
+		B9A6958AD86190EBD0AA8270 /* Pods_ExamenIronBit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExamenIronBit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6C83711E68AF1F0021D61B /* ExamenIronBit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamenIronBit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6C83741E68AF1F0021D61B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD6C83761E68AF1F0021D61B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95839FAD5516421E083DE3E /* Pods_ExamenIronBit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		024F803748340C6034B19082 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21169CDE4CA582BB05E93C26 /* Pods-ExamenIronBit.debug.xcconfig */,
+				2B46F6CC35187EB5AD08FF54 /* Pods-ExamenIronBit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		879F7229B15726BA4658A9F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9A6958AD86190EBD0AA8270 /* Pods_ExamenIronBit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FD6C83681E68AF1F0021D61B = {
 			isa = PBXGroup;
 			children = (
 				FD6C83731E68AF1F0021D61B /* ExamenIronBit */,
 				FD6C83721E68AF1F0021D61B /* Products */,
+				024F803748340C6034B19082 /* Pods */,
+				879F7229B15726BA4658A9F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD6C83861E68AF1F0021D61B /* Build configuration list for PBXNativeTarget "ExamenIronBit" */;
 			buildPhases = (
+				671D36B4270E002FAB664DCF /* [CP] Check Pods Manifest.lock */,
 				FD6C836D1E68AF1F0021D61B /* Sources */,
 				FD6C836E1E68AF1F0021D61B /* Frameworks */,
 				FD6C836F1E68AF1F0021D61B /* Resources */,
+				DC63B4324A3F887DFCEEF318 /* [CP] Embed Pods Frameworks */,
+				83779F4D0B1E900835271918 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,6 +161,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		671D36B4270E002FAB664DCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		83779F4D0B1E900835271918 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExamenIronBit/Pods-ExamenIronBit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC63B4324A3F887DFCEEF318 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExamenIronBit/Pods-ExamenIronBit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FD6C836D1E68AF1F0021D61B /* Sources */ = {
@@ -261,6 +336,7 @@
 		};
 		FD6C83871E68AF1F0021D61B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21169CDE4CA582BB05E93C26 /* Pods-ExamenIronBit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NUT7SFZWGF;
@@ -274,6 +350,7 @@
 		};
 		FD6C83881E68AF1F0021D61B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B46F6CC35187EB5AD08FF54 /* Pods-ExamenIronBit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NUT7SFZWGF;
